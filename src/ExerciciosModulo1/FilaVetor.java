@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class ListaVetor {
+public class FilaVetor {
 
     public static void main(String[] args) {
 
@@ -17,10 +17,11 @@ public class ListaVetor {
         do {
 
 
-            System.out.println("1 - Adicionar um novo Cliente na fila\n" +
-                    "2 - Listar todos os Clientes\n" +
-                    "3 - Retirar cliente da fila\n" +
-                    "0 - Sair");
+            System.out.println("""
+                    1 - Adicionar um novo Cliente na fila
+                    2 - Listar todos os Clientes
+                    3 - Retirar cliente da fila
+                    0 - Sair""");
             opcao = leia.next().toUpperCase().charAt(0);
 
             switch (opcao) {
@@ -31,18 +32,18 @@ public class ListaVetor {
                     // ou fila.add(leia.next());
                     break;
                 case '2':
-                    if (fila.size()==0) {
+                    if (fila.size() == 0) {
                         System.out.println("A fila está vazia");
                         break;
-                    } else{
+                    } else {
                         System.out.println(fila);
                     }
                 case '3':
 
-                    if (fila.isEmpty()){
+                    if (fila.isEmpty()) {
                         System.out.println("Fila está vazia");
-                    } else{
-                    System.out.println(fila.remove());
+                    } else {
+                        System.out.println(fila.remove());
                     }
                     break;
                 case '0':
@@ -52,6 +53,6 @@ public class ListaVetor {
                     System.out.println("Opção Inválida");
                     break;
             }
-        }while (opcao!='0');
+        } while (opcao != '0');
     }
 }
